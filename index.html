@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="台灣重要事件圖卡互動教材：隨機抽圖、事件猜猜看、情緒引導與主題選擇題。">
+  <title>台灣重要事件｜互動圖卡活動頁</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231e6570'/%3E%3Cpath d='M14 46h36M19 42V18h26v24M25 25h4v5h-4zm10 0h4v5h-4z' stroke='%23fefaf2' stroke-width='4' fill='none'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#play"><span class="brand-mark">臺</span><span>台灣重要事件<span class="brand-sub">情緒關卡互動圖卡</span></span></a>
+    <nav aria-label="頁面導覽"><a href="#how-to">怎麼玩</a><a href="#gallery">40 張圖卡</a><a href="#download">下載</a></nav>
+  </header>
+
+  <main>
+    <section id="play" aria-labelledby="play-title">
+      <div class="section-heading">
+        <div><div class="section-kicker">EVENT CARD ACTIVITY</div><h1 id="play-title">先看圖，再說出心裡的感受</h1><p>把事件卡當成一扇窗：先請長輩猜猜看，再邀請他分享記憶、情緒與想法。</p></div>
+        <button id="fullscreenButton" class="button primary" type="button">全螢幕帶領</button>
+      </div>
+      <div id="activity" class="activity-shell">
+        <section class="activity-stage" aria-label="隨機台灣重要事件圖卡">
+          <div class="stage-meta"><span id="roundLabel">第 1 / 40 張</span><span id="eventMeta">災害與健康｜1999</span></div>
+          <div class="stage-image-wrap"><img id="stageImage" src="cards/event01.png" alt="台灣重要事件圖卡第 01 張"></div>
+          <div class="stage-caption"><h2>這是什麼圖片？</h2><p>先不公布答案，請問：「你覺得這張圖在說什麼？你會用哪個情緒詞形容？」</p><div id="answerBox" class="answer-box" hidden><small>事件答案</small><strong id="answerTitle"></strong></div></div>
+        </section>
+        <aside class="activity-controls" aria-label="互動控制與事件問答">
+          <div class="control-block"><div class="control-label">圖卡控制</div><div class="control-row"><button id="previousButton" class="button ghost" type="button">上一張</button><button id="randomButton" class="button primary" type="button">隨機抽一張</button><button id="nextButton" class="button ghost" type="button">下一張</button></div><div class="control-row compact"><button id="revealButton" class="button secondary" type="button">顯示答案</button></div><p class="keyboard-note">帶領時可用 <kbd>←</kbd> <kbd>→</kbd> 換圖，按 <kbd>R</kbd> 或空白鍵隨機抽卡。</p></div>
+          <div class="control-block"><div class="control-label">自由分類提示</div><p id="promptText" class="prompt-text">你看到這張圖，第一個浮現的情緒詞是什麼？</p></div>
+          <div class="control-block"><div class="control-label">事件小問答</div><div id="quizQuestion" class="quiz-question"></div><div id="quizOptions" class="quiz-options"></div><p id="answerStatus" class="answer-status" aria-live="polite"></p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="how-to" class="how-to" aria-labelledby="how-title"><div class="section-heading"><div><div class="section-kicker">HOW TO PLAY</div><h2 id="how-title">現場可以這樣玩</h2></div></div><div class="how-grid"><article class="how-card"><span class="number">1</span><h3>隨機抽一張，先看畫面</h3><p>請長輩描述看到的人、事、地點與氣氛，不急著公布事件名稱。</p></article><article class="how-card"><span class="number">2</span><h3>問「這是什麼圖片？」</h3><p>可以從年代、生活經驗或新聞記憶開始猜，也可以只說自己看到的感覺。</p></article><article class="how-card"><span class="number">3</span><h3>做一題主題選擇題</h3><p>選完後再問：「同一個事件，還可能有什麼不同感受？」讓答案回到分享。</p></article></div></section>
+
+    <section id="gallery" class="gallery-section" aria-labelledby="gallery-title"><div class="section-heading"><div><div class="section-kicker">40 EVENT CARDS</div><h2 id="gallery-title">台灣重要事件圖卡</h2><p>點選圖卡即可帶回活動區；圖卡可用來做情緒分類、回憶分享與同理討論。</p></div><label class="filter-label">主題篩選<select id="categoryFilter"><option>全部</option><option>災害與健康</option><option>民主與社會</option><option>建設與生活</option><option>文化與運動</option></select></label></div><div id="galleryGrid" class="gallery-grid"></div></section>
+
+    <section id="download" class="download-section" aria-labelledby="download-title"><div class="download-panel"><div><div class="section-kicker">PRINT &amp; SHARE</div><h2 id="download-title">下載整套圖卡</h2><p>包含 40 張單張 PNG、A4 裁切版 PDF 與完整使用說明，可直接列印或投影。</p></div><div class="download-links"><a href="downloads/台灣重要事件圖卡40張_A4裁切版.pdf" download>A4 裁切版 PDF</a><a href="downloads/台灣重要事件圖卡40張_下載套件.zip" download>完整圖卡 ZIP</a></div></div></section>
+  </main>
+  <footer>台灣重要事件圖卡・適合回憶分享與情緒討論；不作心理測驗、診斷或正式 ICOPE 評估。</footer>
+  <script src="app.js"></script>
+</body>
+</html>
